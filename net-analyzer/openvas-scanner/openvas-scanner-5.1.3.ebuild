@@ -20,7 +20,10 @@ DEPEND=">=net-analyzer/openvas-libraries-9.0.3"
 
 RDEPEND="${DEPEND}"
 
-BDEPEND="virtual/pkgconfig"
+BDEPEND="
+	app-doc/doxygen[dot]
+	virtual/pkgconfig
+"
 
 PATCHES=(
 	"${FILESDIR}/${P}-gcc8.patch"

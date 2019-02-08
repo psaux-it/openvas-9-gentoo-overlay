@@ -37,6 +37,7 @@ BDEPEND="
 	sys-devel/bison
 	sys-devel/flex
 	virtual/pkgconfig
+	app-doc/doxygen[dot]
 "
 
 PATCHES=(

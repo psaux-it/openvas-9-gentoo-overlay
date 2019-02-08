@@ -28,7 +28,10 @@ RDEPEND="${DEPEND}
 	>=net-analyzer/openvas-scanner-5.1.3
 "
 
-BDEPEND="virtual/pkgconfig"
+BDEPEND="
+	app-doc/doxygen[dot]
+	virtual/pkgconfig
+"
 
 BUILD_DIR="${WORKDIR}/${MY_PN}-${PV}_build"
 S="${WORKDIR}/${MY_PN}-${PV}"
