@@ -25,8 +25,6 @@ DEPEND="
 
 RDEPEND="${DEPEND}"
 
-BDEPEND="virtual/pkgconfig"
-
 src_prepare() {
 	distutils-r1_python_prepare_all
 	sed -i "s/packages=find_packages(),.*/packages=find_packages(exclude=['tests*', 'docs']),/" "$S"/setup.py || die
