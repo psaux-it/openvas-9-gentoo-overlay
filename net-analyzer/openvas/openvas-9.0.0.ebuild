@@ -14,7 +14,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+extras +cli +gsa +ospd ldap radius"
 
 DEPEND="
-	dev-db/redis
 	radius? ( >=net-analyzer/openvas-libraries-9.0.3[radius] )
 	ldap? ( >=net-analyzer/openvas-libraries-9.0.3[ldap] )
 	>=net-analyzer/openvas-libraries-9.0.3
@@ -31,11 +30,8 @@ DEPEND="
 		>=net-analyzer/ospd-1.3.2[extras]
 		app-doc/doxygen[dot]
 		app-doc/xmltoman
-		dev-perl/SQL-Translator
 		app-text/htmldoc
 		dev-texlive/texlive-latexextra
-		sys-devel/gettext
-		dev-python/polib
 	)"
 
 pkg_postinst() {

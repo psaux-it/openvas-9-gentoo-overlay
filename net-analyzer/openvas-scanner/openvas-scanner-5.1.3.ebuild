@@ -16,17 +16,25 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="+extras"
 
-DEPEND=">=net-analyzer/openvas-libraries-9.0.3"
+DEPEND="
+	dev-db/redis
+	dev-libs/libgcrypt:0=
+	net-libs/gnutls:=[tools]
+	net-libs/libssh:=
+	>=net-analyzer/openvas-libraries-9.0.3"
 
 RDEPEND="
 	${DEPEND}
 	!net-analyzer/openvas-tools"
 
 BDEPEND="
+	sys-devel/bison
+	sys-devel/flex
 	app-doc/doxygen[dot]
 	virtual/pkgconfig"
 
-PDEPEND=">=net-analyzer/openvas-9.0.0"
+PDEPEND="
+	>=net-analyzer/openvas-9.0.0"
 
 PATCHES=(
 	"${FILESDIR}/${P}-gcc8.patch"

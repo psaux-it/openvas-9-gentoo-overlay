@@ -20,15 +20,18 @@ DEPEND="
 	dev-db/sqlite:3
 	extras? ( media-libs/gd:2=
 		dev-perl/GD )
+	dev-libs/libgcrypt:0=
 	>=net-analyzer/openvas-libraries-9.0.3"
 
-RDEPEND="${DEPEND}"
+RDEPEND="
+	${DEPEND}"
 
 BDEPEND="
 	app-doc/doxygen[dot]
 	virtual/pkgconfig"
 
-PDEPEND=">=net-analyzer/openvas-9.0.0"
+PDEPEND="
+	>=net-analyzer/openvas-9.0.0"
 
 BUILD_DIR="${WORKDIR}/${MY_PN}-${PV}_build"
 S="${WORKDIR}/${MY_PN}-${PV}"

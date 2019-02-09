@@ -17,27 +17,30 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+extras ldap radius"
 
 DEPEND="
-	dev-perl/UUID
-	sys-libs/zlib
 	dev-libs/hiredis
-	>=dev-libs/libgcrypt-1.6:=
+	dev-libs/libgcrypt:0=
 	dev-libs/libksba
+	dev-perl/UUID
 	net-analyzer/net-snmp
 	net-libs/gnutls:=[tools]
 	net-libs/libpcap
 	net-libs/libssh:=
-	radius? ( net-dialup/freeradius-client )
-	ldap? ( net-nds/openldap )"
+	sys-libs/zlib
+	extras? ( dev-perl/SQL-Translator )
+	ldap? ( net-nds/openldap )
+	radius? ( net-dialup/freeradius-client )"
 
-RDEPEND="${DEPEND}"
+RDEPEND="
+	${DEPEND}"
 
 BDEPEND="
+	app-doc/doxygen[dot]
 	sys-devel/bison
 	sys-devel/flex
-	virtual/pkgconfig
-	app-doc/doxygen[dot]"
+	virtual/pkgconfig"
 
-PDEPEND=">=net-analyzer/openvas-9.0.0"
+PDEPEND="
+	>=net-analyzer/openvas-9.0.0"
 
 PATCHES=(
 	"${FILESDIR}/${P}-gcc8.patch"

@@ -17,18 +17,26 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+extras"
 
 DEPEND="
+	dev-libs/libgcrypt:0=
 	dev-libs/libxml2:2
 	dev-libs/libxslt
+	extras? (
+		dev-python/polib
+		sys-devel/gettext
+	)
 	>=net-analyzer/openvas-libraries-9.0.3
+	net-libs/gnutls:=[tools]
 	net-libs/libmicrohttpd[messages]"
 
-RDEPEND="${DEPEND}"
+RDEPEND="
+	${DEPEND}"
 
 BDEPEND="
 	app-doc/doxygen[dot]
 	virtual/pkgconfig"
 
-PDEPEND=">=net-analyzer/openvas-9.0.0"
+PDEPEND="
+	>=net-analyzer/openvas-9.0.0"
 
 BUILD_DIR="${WORKDIR}/${MY_PN}-${PV}_build"
 S="${WORKDIR}/${MY_PN}-${PV}"
