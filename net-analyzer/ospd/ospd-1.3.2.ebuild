@@ -24,8 +24,6 @@ DEPEND="
 
 RDEPEND="${DEPEND}"
 
-BDEPEND="virtual/pkgconfig"
-
 python_prepare_all() {
 	distutils-r1_python_prepare_all
 }
