@@ -19,11 +19,13 @@ DEPEND="
 	dev-python/lxml[${PYTHON_USEDEP}]
 	dev-python/paramiko[${PYTHON_USEDEP}]
 	dev-python/defusedxml[${PYTHON_USEDEP}]
-	dev-python/pythondialog:0[${PYTHON_USEDEP}]
-	>=net-analyzer/openvas-libraries-9.0.3
-"
+	dev-python/pythondialog:0[${PYTHON_USEDEP}]"
 
-RDEPEND="${DEPEND}"
+RDEPEND="
+	${DEPEND}
+	!net-analyzer/openvas-cli"
+
+PDEPEND=">=net-analyzer/openvas-9.0.0"
 
 src_prepare() {
 	distutils-r1_python_prepare_all

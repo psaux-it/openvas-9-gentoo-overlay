@@ -18,11 +18,10 @@ IUSE="extras"
 DEPEND="
 	dev-python/paramiko[${PYTHON_USEDEP}]
 	dev-python/defusedxml[${PYTHON_USEDEP}]
-	dev-python/lxml[${PYTHON_USEDEP}]
-	>=net-analyzer/openvas-libraries-9.0.3
-"
+	dev-python/lxml[${PYTHON_USEDEP}]"
 
 RDEPEND="${DEPEND}"
+PDEPEND=">=net-analyzer/openvas-9.0.0"
 
 python_prepare_all() {
 	distutils-r1_python_prepare_all

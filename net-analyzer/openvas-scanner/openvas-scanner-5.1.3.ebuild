@@ -18,12 +18,15 @@ IUSE="+extras"
 
 DEPEND=">=net-analyzer/openvas-libraries-9.0.3"
 
-RDEPEND="${DEPEND}"
+RDEPEND="
+	${DEPEND}
+	!net-analyzer/openvas-tools"
 
 BDEPEND="
 	app-doc/doxygen[dot]
-	virtual/pkgconfig
-"
+	virtual/pkgconfig"
+
+PDEPEND=">=net-analyzer/openvas-9.0.0"
 
 PATCHES=(
 	"${FILESDIR}/${P}-gcc8.patch"

@@ -22,15 +22,13 @@ DEPEND="
 	>=net-analyzer/openvas-libraries-9.0.3
 	net-libs/libmicrohttpd[messages]"
 
-RDEPEND="${DEPEND}
-	>=net-analyzer/openvas-scanner-5.1.3
-	>=net-analyzer/openvas-manager-7.0.3
-"
+RDEPEND="${DEPEND}"
 
 BDEPEND="
 	app-doc/doxygen[dot]
-	virtual/pkgconfig
-"
+	virtual/pkgconfig"
+
+PDEPEND=">=net-analyzer/openvas-9.0.0"
 
 BUILD_DIR="${WORKDIR}/${MY_PN}-${PV}_build"
 S="${WORKDIR}/${MY_PN}-${PV}"

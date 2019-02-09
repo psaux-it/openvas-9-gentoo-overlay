@@ -27,9 +27,7 @@ DEPEND="
 	net-libs/libpcap
 	net-libs/libssh:=
 	radius? ( net-dialup/freeradius-client )
-	ldap? ( net-nds/openldap )
-	>=net-analyzer/openvas-9.0.0
-"
+	ldap? ( net-nds/openldap )"
 
 RDEPEND="${DEPEND}"
 
@@ -37,8 +35,9 @@ BDEPEND="
 	sys-devel/bison
 	sys-devel/flex
 	virtual/pkgconfig
-	app-doc/doxygen[dot]
-"
+	app-doc/doxygen[dot]"
+
+PDEPEND=">=net-analyzer/openvas-9.0.0"
 
 PATCHES=(
 	"${FILESDIR}/${P}-gcc8.patch"

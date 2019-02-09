@@ -14,24 +14,21 @@ SRC_URI="https://github.com/greenbone/${MY_PN}/archive/v${PV}.tar.gz -> ${P}.tar
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
-IUSE="extras"
+IUSE="+extras"
 
 DEPEND="
 	dev-db/sqlite:3
 	extras? ( media-libs/gd:2=
-		dev-perl/GD
-		)
-	>=net-analyzer/openvas-libraries-9.0.3
-"
+		dev-perl/GD )
+	>=net-analyzer/openvas-libraries-9.0.3"
 
-RDEPEND="${DEPEND}
-	>=net-analyzer/openvas-scanner-5.1.3
-"
+RDEPEND="${DEPEND}"
 
 BDEPEND="
 	app-doc/doxygen[dot]
-	virtual/pkgconfig
-"
+	virtual/pkgconfig"
+
+PDEPEND=">=net-analyzer/openvas-9.0.0"
 
 BUILD_DIR="${WORKDIR}/${MY_PN}-${PV}_build"
 S="${WORKDIR}/${MY_PN}-${PV}"
@@ -51,7 +48,7 @@ src_configure() {
 		"-DLOCALSTATEDIR=${EPREFIX}/var"
 		"-DSYSCONFDIR=${EPREFIX}/etc"
 	)
-	# Disable-the-non-null-compare-warning-error
+	# Fix runtime QA error for 7.0.3
 	append-cflags -Wno-nonnull
 	cmake-utils_src_configure
 }
