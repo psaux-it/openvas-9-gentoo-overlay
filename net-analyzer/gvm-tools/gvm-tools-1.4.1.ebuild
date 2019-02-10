@@ -30,6 +30,7 @@ PDEPEND="
 
 src_prepare() {
 	distutils-r1_python_prepare_all
+	# Fix build issue
 	sed -i "s/packages=find_packages(),.*/packages=find_packages(exclude=['tests*', 'docs']),/" "$S"/setup.py || die
 }
 
