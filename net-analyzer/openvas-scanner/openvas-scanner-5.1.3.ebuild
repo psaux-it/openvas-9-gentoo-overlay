@@ -44,6 +44,7 @@ PATCHES=(
 
 src_prepare() {
 	cmake-utils_src_prepare
+	# Fix for correct FHS/Gentoo policy paths for 5.1.3
 	sed -i "s*/doc/openvas-scanner/*/doc/openvas-scanner-${PV}/*g" "$S"/CMakeLists.txt || die
 	if use extras; then
 		doxygen -u "$S"/doc/Doxyfile_full.in || die
