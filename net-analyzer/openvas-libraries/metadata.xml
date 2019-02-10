@@ -10,7 +10,7 @@
 		<name>Proxy Maintainers</name>
 	</maintainer>
 	<use>
-		<flag name="extras">Fonts, pdf results and docs support</flag>
+		<flag name="extras">Html docs support</flag>
 		<flag name="ldap">Enable support for ldap</flag>
 		<flag name="radius">Enable support for radius</flag>
 	</use>
