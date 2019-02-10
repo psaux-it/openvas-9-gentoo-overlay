@@ -18,9 +18,10 @@ IUSE="+extras"
 
 DEPEND="
 	dev-db/sqlite:3
-	extras? ( media-libs/gd:2=
-		dev-perl/GD )
 	dev-libs/libgcrypt:0=
+	extras? ( media-libs/gd:2=
+		dev-perl/GD
+	)
 	>=net-analyzer/openvas-libraries-9.0.3"
 
 RDEPEND="
@@ -38,6 +39,7 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_prepare() {
 	cmake-utils_src_prepare
+	# Fix the ebuild to use correct FHS/Gentoo policy paths for 7.0.3
 	sed -i "s*/doc/openvas-manager/html/*/doc/openvas-manager-${PV}/html/*g" "$S"/doc/CMakeLists.txt || die
 	sed -i "s*/doc/openvas-manager/*/doc/openvas-manager-${PV}/*g" "$S"/CMakeLists.txt || die
 	if use extras; then

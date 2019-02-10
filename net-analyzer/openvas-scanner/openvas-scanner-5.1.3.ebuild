@@ -19,18 +19,18 @@ IUSE="+extras"
 DEPEND="
 	dev-db/redis
 	dev-libs/libgcrypt:0=
+	>=net-analyzer/openvas-libraries-9.0.3
 	net-libs/gnutls:=[tools]
-	net-libs/libssh:=
-	>=net-analyzer/openvas-libraries-9.0.3"
+	net-libs/libssh:="
 
 RDEPEND="
 	${DEPEND}
 	!net-analyzer/openvas-tools"
 
 BDEPEND="
+	app-doc/doxygen[dot]
 	sys-devel/bison
 	sys-devel/flex
-	app-doc/doxygen[dot]
 	virtual/pkgconfig"
 
 PDEPEND="
