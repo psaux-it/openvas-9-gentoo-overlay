@@ -28,7 +28,7 @@ RDEPEND="
 	!net-analyzer/openvas-tools"
 
 BDEPEND="
-	app-doc/doxygen[dot]
+	extras? ( app-doc/doxygen[dot] )
 	sys-devel/bison
 	sys-devel/flex
 	virtual/pkgconfig"

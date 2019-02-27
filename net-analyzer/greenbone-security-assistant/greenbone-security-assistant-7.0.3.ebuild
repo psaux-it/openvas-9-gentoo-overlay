@@ -32,7 +32,7 @@ RDEPEND="
 	${DEPEND}"
 
 BDEPEND="
-	app-doc/doxygen[dot]
+	extras? ( app-doc/doxygen[dot] )
 	virtual/pkgconfig"
 
 PDEPEND="
