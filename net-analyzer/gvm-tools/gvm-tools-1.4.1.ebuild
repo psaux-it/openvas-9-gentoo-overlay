@@ -23,6 +23,7 @@ DEPEND="
 
 RDEPEND="
 	${DEPEND}
+	dev-python/setuptools
 	!net-analyzer/openvas-cli"
 
 PDEPEND="
@@ -32,16 +33,4 @@ src_prepare() {
 	distutils-r1_python_prepare_all
 	# Fix build issue
 	sed -i "s/packages=find_packages(),.*/packages=find_packages(exclude=['tests*', 'docs']),/" "$S"/setup.py || die
-}
-
-src_configure() {
-	distutils-r1_src_configure
-}
-
-src_compile() {
-	distutils-r1_src_compile
-}
-
-src_install() {
-	distutils-r1_src_install
 }
