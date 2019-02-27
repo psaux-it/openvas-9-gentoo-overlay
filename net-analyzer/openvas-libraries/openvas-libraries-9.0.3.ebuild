@@ -78,8 +78,6 @@ src_compile() {
 	cmake-utils_src_compile
 	if use extras; then
 		cmake-utils_src_make -C "${BUILD_DIR}" doc
-		einfo "It seems everything is going well."
-		einfo "Starting a full doc compile this will take some time."
 		cmake-utils_src_make doc-full -C "${BUILD_DIR}" doc
 		HTML_DOCS=( "${BUILD_DIR}"/doc/generated/html/. )
 	fi
