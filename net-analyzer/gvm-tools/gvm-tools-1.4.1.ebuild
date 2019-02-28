@@ -31,6 +31,7 @@ PDEPEND="
 
 src_prepare() {
 	distutils-r1_python_prepare_all
-	# Fix build issue
+	# Exlude tests & correct FHS/Gentoo policy paths
 	sed -i "s/packages=find_packages(),.*/packages=find_packages(exclude=['tests*', 'docs']),/" "$S"/setup.py || die
+	sed -i -e "s*''*'/usr/share/doc/${P}'*g" "$S"/setup.py || die
 }
