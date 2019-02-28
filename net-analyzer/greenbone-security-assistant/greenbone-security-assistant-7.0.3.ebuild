@@ -20,10 +20,7 @@ DEPEND="
 	dev-libs/libgcrypt:0=
 	dev-libs/libxml2:2
 	dev-libs/libxslt
-	extras? (
-		dev-python/polib
-		sys-devel/gettext
-	)
+	extras? ( dev-python/polib )
 	>=net-analyzer/openvas-libraries-9.0.3
 	net-libs/gnutls:=[tools]
 	net-libs/libmicrohttpd[messages]"
@@ -32,7 +29,9 @@ RDEPEND="
 	${DEPEND}"
 
 BDEPEND="
-	extras? ( app-doc/doxygen[dot] )
+	extras? ( app-doc/doxygen[dot]
+		sys-devel/gettext
+	)
 	virtual/pkgconfig"
 
 PDEPEND="
