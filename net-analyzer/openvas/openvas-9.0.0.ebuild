@@ -28,7 +28,6 @@ DEPEND="
 		>=net-analyzer/openvas-manager-7.0.3[extras]
 		>=net-analyzer/greenbone-security-assistant-7.0.3[extras]
 		>=net-analyzer/ospd-1.3.2[extras]
-		app-doc/doxygen[dot]
 		app-doc/xmltoman
 		app-text/htmldoc
 		dev-texlive/texlive-latexextra

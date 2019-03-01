@@ -19,17 +19,17 @@ IUSE="+extras"
 DEPEND="
 	dev-db/sqlite:3
 	dev-libs/libgcrypt:0=
+	>=net-analyzer/openvas-libraries-9.0.3
 	extras? ( dev-perl/GD
 		media-libs/gd:2=
-	)
-	>=net-analyzer/openvas-libraries-9.0.3"
+	)"
 
 RDEPEND="
 	${DEPEND}"
 
 BDEPEND="
-	extras? ( app-doc/doxygen[dot] )
-	virtual/pkgconfig"
+	virtual/pkgconfig
+	extras? ( app-doc/doxygen[dot] )"
 
 PDEPEND="
 	>=net-analyzer/openvas-9.0.0"

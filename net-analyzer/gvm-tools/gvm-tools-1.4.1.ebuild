@@ -15,16 +15,16 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="
+RDEPEND="
+	dev-python/defusedxml[${PYTHON_USEDEP}]
 	dev-python/lxml[${PYTHON_USEDEP}]
 	dev-python/paramiko[${PYTHON_USEDEP}]
-	dev-python/defusedxml[${PYTHON_USEDEP}]
-	dev-python/pythondialog:0[${PYTHON_USEDEP}]"
-
-RDEPEND="
-	${DEPEND}
-	dev-python/setuptools
+	dev-python/pythondialog:0[${PYTHON_USEDEP}]
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	!net-analyzer/openvas-cli"
+
+DEPEND="
+	${RDEPEND}"
 
 PDEPEND="
 	>=net-analyzer/openvas-9.0.0"

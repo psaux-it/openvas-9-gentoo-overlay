@@ -15,20 +15,16 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="+extras"
 
-DEPEND="
-	dev-python/paramiko[${PYTHON_USEDEP}]
-	dev-python/defusedxml[${PYTHON_USEDEP}]
-	dev-python/lxml[${PYTHON_USEDEP}]"
-
 RDEPEND="
-	${DEPEND}"
+	dev-python/defusedxml[${PYTHON_USEDEP}]
+	dev-python/lxml[${PYTHON_USEDEP}]
+	dev-python/paramiko[${PYTHON_USEDEP}]"
+
+DEPEND="
+	${RDEPEND}"
 
 PDEPEND="
 	>=net-analyzer/openvas-9.0.0"
-
-python_prepare_all() {
-	distutils-r1_python_prepare_all
-}
 
 python_compile() {
 	if use extras; then
@@ -36,8 +32,4 @@ python_compile() {
 		HTML_DOCS=( "${S}"/doc/. )
 	fi
 	distutils-r1_python_compile
-}
-
-python_install_all() {
-	distutils-r1_python_install_all
 }
