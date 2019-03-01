@@ -21,6 +21,7 @@ RDEPEND="
 	dev-python/paramiko[${PYTHON_USEDEP}]
 	dev-python/pythondialog:0[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
+	>=net-analyzer/openvas-manager-7.0.3
 	!net-analyzer/openvas-cli"
 
 DEPEND="

@@ -18,11 +18,11 @@ IUSE="+extras"
 RDEPEND="
 	dev-python/defusedxml[${PYTHON_USEDEP}]
 	dev-python/lxml[${PYTHON_USEDEP}]
-	dev-python/paramiko[${PYTHON_USEDEP}]"
+	dev-python/paramiko[${PYTHON_USEDEP}]
+	>=net-analyzer/greenbone-security-assistant-7.0.3"
 
 DEPEND="
-	${RDEPEND}
-	>=net-analyzer/openvas-libraries-9.0.3"
+	${RDEPEND}"
 
 python_compile() {
 	if use extras; then

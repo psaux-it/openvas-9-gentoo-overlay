@@ -43,9 +43,6 @@ BDEPEND="
 		  dev-perl/SQL-Translator
 	)"
 
-PDEPEND="
-	>=net-analyzer/openvas-9.0.0"
-
 PATCHES=(
 	"${FILESDIR}/${P}-gcc8.patch"
 	"${FILESDIR}/${P}-netsnmp.patch"
