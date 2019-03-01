@@ -24,10 +24,8 @@ RDEPEND="
 	!net-analyzer/openvas-cli"
 
 DEPEND="
-	${RDEPEND}"
-
-PDEPEND="
-	>=net-analyzer/openvas-9.0.0"
+	${RDEPEND}
+	>=net-analyzer/openvas-libraries-9.0.3"
 
 src_prepare() {
 	distutils-r1_python_prepare_all
