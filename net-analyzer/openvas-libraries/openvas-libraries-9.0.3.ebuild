@@ -26,9 +26,6 @@ DEPEND="
 	net-libs/libpcap
 	net-libs/libssh:=
 	sys-libs/zlib
-	extras? ( dev-perl/CGI
-		dev-perl/SQL-Translator
-	)
 	ldap? ( net-nds/openldap )
 	radius? ( net-dialup/freeradius-client )"
 
@@ -39,7 +36,12 @@ BDEPEND="
 	sys-devel/bison
 	sys-devel/flex
 	virtual/pkgconfig
-	extras? ( app-doc/doxygen[dot] )"
+	extras? ( app-doc/doxygen[dot]
+		  app-doc/xmltoman
+		  app-text/htmldoc
+		  dev-perl/CGI
+		  dev-perl/SQL-Translator
+	)"
 
 PDEPEND="
 	>=net-analyzer/openvas-9.0.0"
