@@ -33,7 +33,7 @@ BDEPEND="
 	virtual/pkgconfig
 	extras? ( app-doc/doxygen[dot]
 		  app-doc/xmltoman
-                  app-text/htmldoc
+		  app-text/htmldoc
 		  dev-perl/CGI
 		  dev-perl/SQL-Translator
 	)"
