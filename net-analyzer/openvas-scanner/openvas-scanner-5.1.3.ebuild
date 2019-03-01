@@ -31,7 +31,12 @@ BDEPEND="
 	sys-devel/bison
 	sys-devel/flex
 	virtual/pkgconfig
-	extras? ( app-doc/doxygen[dot] )"
+	extras? ( app-doc/doxygen[dot]
+		  app-doc/xmltoman
+                  app-text/htmldoc
+		  dev-perl/CGI
+		  dev-perl/SQL-Translator
+	)"
 
 PDEPEND="
 	>=net-analyzer/openvas-9.0.0"
