@@ -21,10 +21,8 @@ RDEPEND="
 	dev-python/paramiko[${PYTHON_USEDEP}]"
 
 DEPEND="
-	${RDEPEND}"
-
-PDEPEND="
-	>=net-analyzer/openvas-9.0.0"
+	${RDEPEND}
+	>=net-analyzer/openvas-libraries-9.0.3"
 
 python_compile() {
 	if use extras; then
