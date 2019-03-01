@@ -25,7 +25,8 @@ DEPEND="
 	net-libs/libmicrohttpd[messages]"
 
 RDEPEND="
-	${DEPEND}"
+	${DEPEND}
+	extras? ( dev-texlive/texlive-latexextra )"
 
 BDEPEND="
 	virtual/pkgconfig
