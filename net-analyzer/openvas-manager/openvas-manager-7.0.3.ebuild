@@ -35,9 +35,6 @@ BDEPEND="
 		  media-libs/gd:2=
 	)"
 
-PDEPEND="
-	>=net-analyzer/openvas-9.0.0"
-
 BUILD_DIR="${WORKDIR}/${MY_PN}-${PV}_build"
 S="${WORKDIR}/${MY_PN}-${PV}"
 
