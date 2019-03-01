@@ -22,8 +22,7 @@ DEPEND="
 	dev-libs/libxslt
 	>=net-analyzer/openvas-libraries-9.0.3
 	net-libs/gnutls:=[tools]
-	net-libs/libmicrohttpd[messages]
-	extras? ( dev-python/polib )"
+	net-libs/libmicrohttpd[messages]"
 
 RDEPEND="
 	${DEPEND}"
@@ -31,7 +30,10 @@ RDEPEND="
 BDEPEND="
 	virtual/pkgconfig
 	extras? ( app-doc/doxygen[dot]
-		sys-devel/gettext
+		  app-doc/xmltoman
+		  app-text/htmldoc
+		  dev-python/polib
+		  sys-devel/gettext
 	)"
 
 PDEPEND="
