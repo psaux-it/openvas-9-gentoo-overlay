@@ -19,7 +19,7 @@ IUSE="+extras"
 DEPEND="
 	dev-db/sqlite:3
 	dev-libs/libgcrypt:0=
-	>=net-analyzer/openvas-libraries-9.0.3
+	>=net-analyzer/openvas-libraries-9.0.3"
 
 RDEPEND="
 	${DEPEND}"
