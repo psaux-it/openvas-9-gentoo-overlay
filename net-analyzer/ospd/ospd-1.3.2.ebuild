@@ -28,7 +28,7 @@ PDEPEND="
 
 python_compile() {
 	if use extras; then
-		/bin/bash "${S}"/doc/generate
+		bash "${S}"/doc/generate || die
 		HTML_DOCS=( "${S}"/doc/. )
 	fi
 	distutils-r1_python_compile
