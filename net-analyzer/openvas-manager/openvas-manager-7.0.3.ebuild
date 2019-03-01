@@ -20,16 +20,20 @@ DEPEND="
 	dev-db/sqlite:3
 	dev-libs/libgcrypt:0=
 	>=net-analyzer/openvas-libraries-9.0.3
-	extras? ( dev-perl/GD
-		media-libs/gd:2=
-	)"
 
 RDEPEND="
 	${DEPEND}"
 
 BDEPEND="
 	virtual/pkgconfig
-	extras? ( app-doc/doxygen[dot] )"
+	extras? ( app-doc/doxygen[dot]
+		  app-doc/xmltoman
+		  app-text/htmldoc
+		  dev-perl/CGI
+		  dev-perl/GD
+		  dev-perl/SQL-Translator
+		  media-libs/gd:2=
+	)"
 
 PDEPEND="
 	>=net-analyzer/openvas-9.0.0"
