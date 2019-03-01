@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="+extras +cli +gsa +ospd ldap radius"
 
-DEPEND="
+RDEPEND="
 	radius? ( >=net-analyzer/openvas-libraries-9.0.3[radius] )
 	ldap? ( >=net-analyzer/openvas-libraries-9.0.3[ldap] )
 	>=net-analyzer/openvas-libraries-9.0.3
