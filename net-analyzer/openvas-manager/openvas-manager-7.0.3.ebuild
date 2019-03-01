@@ -22,7 +22,8 @@ DEPEND="
 	>=net-analyzer/openvas-libraries-9.0.3"
 
 RDEPEND="
-	${DEPEND}"
+	${DEPEND}
+	>=net-analyzer/openvas-scanner-5.1.3"
 
 BDEPEND="
 	virtual/pkgconfig
