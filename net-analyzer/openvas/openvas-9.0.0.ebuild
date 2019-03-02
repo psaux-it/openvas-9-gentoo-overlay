@@ -31,9 +31,9 @@ RDEPEND="
 	)"
 
 pkg_postinst() {
-	elog "------------------------------IMPORTANT---------------------------"
-	elog "| Please read important notes now --> /etc/openvas/OPENVAS.gentoo|"
-	elog "------------------------------------------------------------------"
+	elog "----------------------------IMPORTANT----------------------------"
+	elog " Please read important notes now --> /etc/openvas/OPENVAS.gentoo "
+	elog "-----------------------------------------------------------------"
 	elog "Additional support for extra checks can be get from"
 	optfeature "Nikto — a web server scanning and testing tool" net-analyzer/nikto
 	optfeature "NMAP — a portscanner" net-analyzer/nmap
