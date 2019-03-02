@@ -85,6 +85,9 @@ src_compile() {
 src_install() {
 	cmake-utils_src_install
 
+	insinto /etc/openvas
+	doins "${FILESDIR}"/OPENVAS.gentoo
+
 	keepdir /var/lib/openvas/gnupg
 	keepdir /var/log/openvas
 }

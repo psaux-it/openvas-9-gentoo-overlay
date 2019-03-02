@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit readme.gentoo-r1
+inherit eutils
 
 DESCRIPTION="A remote security scanner"
 HOMEPAGE="http://www.openvas.org/"
@@ -31,8 +31,16 @@ RDEPEND="
 	)"
 
 pkg_postinst() {
-	FORCE_PRINT_ELOG=1
-	"${FILESDIR}"/README.gentoo-"${SLOT}"
-	readme.gentoo_create_doc
-	readme.gentoo_print_elog
+	elog "------------------------------IMPORTANT---------------------------"
+	elog "| Please read important notes now --> /etc/openvas/OPENVAS.gentoo|"
+	elog "------------------------------------------------------------------"
+	elog "Additional support for extra checks can be get from"
+	optfeature "Nikto — a web server scanning and testing tool" net-analyzer/nikto
+	optfeature "NMAP — a portscanner" net-analyzer/nmap
+	optfeature "ike-scan - an IPsec VPN scanning, fingerprinting and testing tool" net-analyzer/ike-scan
+	optfeature "amap — an application protocol detection tool" net-analyzer/amap
+	optfeature "ldapsearch from OpenLDAP utilities — retrieves information from LDAP dictionaries" net-nds/openldap
+	optfeature "ovaldi (OVAL) — an OVAL Interpreter" app-forensics/ovaldi
+	optfeature "portbunny — a Linux-kernel-based portscanner" net-analyzer/portbunny
+	optfeature "w3af — a web application attack and audit framework" net-analyzer/w3af
 }
