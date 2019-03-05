@@ -11,28 +11,30 @@ HOMEPAGE="http://www.openvas.org/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
-IUSE="+extras +cli +gsa +ospd ldap radius"
+IUSE="+cli +extras +gsa ldap +ospd radius"
 
 RDEPEND="
-	radius? ( >=net-analyzer/openvas-libraries-9.0.3[radius] )
-	ldap? ( >=net-analyzer/openvas-libraries-9.0.3[ldap] )
 	>=net-analyzer/openvas-libraries-9.0.3
-	>=net-analyzer/openvas-scanner-5.1.3
 	>=net-analyzer/openvas-manager-7.0.3
-	gsa? ( >=net-analyzer/greenbone-security-assistant-7.0.3 )
+	>=net-analyzer/openvas-scanner-5.1.3
 	cli? ( >=net-analyzer/gvm-tools-1.4.1 )
-	ospd? ( >=net-analyzer/ospd-1.3.2 )
 	extras? (
 		>=net-analyzer/openvas-libraries-9.0.3[extras]
-		>=net-analyzer/openvas-scanner-5.1.3[extras]
 		>=net-analyzer/openvas-manager-7.0.3[extras]
-		>=net-analyzer/greenbone-security-assistant-7.0.3[extras]
-		>=net-analyzer/ospd-1.3.2[extras]
-	)"
+		>=net-analyzer/openvas-scanner-5.1.3[extras]
+	)
+	gsa? (  >=net-analyzer/greenbone-security-assistant-7.0.3
+		extras? ( >=net-analyzer/greenbone-security-assistant-7.0.3[extras] )
+	)
+	ldap? ( >=net-analyzer/openvas-libraries-9.0.3[ldap] )
+	ospd? ( >=net-analyzer/ospd-1.3.2
+		extras? ( >=net-analyzer/ospd-1.3.2[extras] )
+	)
+	radius? ( >=net-analyzer/openvas-libraries-9.0.3[radius] )"
 
 pkg_postinst() {
 	elog "----------------------------IMPORTANT----------------------------"
-	elog " Please read important notes now --> /etc/openvas/OPENVAS.gentoo "
+	elog " Please read important notes now --> /usr/share/openvas/OPENVAS.gentoo "
 	elog "-----------------------------------------------------------------"
 	elog "Additional support for extra checks can be get from"
 	optfeature "Nikto — a web server scanning and testing tool" net-analyzer/nikto
