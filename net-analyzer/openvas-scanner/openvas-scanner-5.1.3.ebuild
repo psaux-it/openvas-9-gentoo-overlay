@@ -21,7 +21,8 @@ DEPEND="
 	dev-libs/libgcrypt:0=
 	>=net-analyzer/openvas-libraries-9.0.3
 	net-libs/gnutls:=[tools]
-	net-libs/libssh:="
+	net-libs/libssh:=
+	extras? ( dev-perl/CGI )"
 
 RDEPEND="
 	${DEPEND}
@@ -34,7 +35,6 @@ BDEPEND="
 	extras? ( app-doc/doxygen[dot]
 		  app-doc/xmltoman
 		  app-text/htmldoc
-		  dev-perl/CGI
 		  dev-perl/SQL-Translator
 	)"
 
