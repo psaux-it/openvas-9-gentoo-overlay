@@ -19,7 +19,11 @@ IUSE="+extras"
 DEPEND="
 	dev-db/sqlite:3
 	dev-libs/libgcrypt:0=
-	>=net-analyzer/openvas-libraries-9.0.3"
+	>=net-analyzer/openvas-libraries-9.0.3
+	extras? ( dev-perl/CGI
+		  dev-perl/GD
+		  media-libs/gd:2=
+	)"
 
 RDEPEND="
 	${DEPEND}
@@ -30,10 +34,7 @@ BDEPEND="
 	extras? ( app-doc/doxygen[dot]
 		  app-doc/xmltoman
 		  app-text/htmldoc
-		  dev-perl/CGI
-		  dev-perl/GD
 		  dev-perl/SQL-Translator
-		  media-libs/gd:2=
 	)"
 
 BUILD_DIR="${WORKDIR}/${MY_PN}-${PV}_build"
