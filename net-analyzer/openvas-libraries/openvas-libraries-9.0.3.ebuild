@@ -14,7 +14,7 @@ SRC_URI="https://github.com/greenbone/${MY_PN}/archive/v${PV}.tar.gz -> ${P}.tar
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
-IUSE="+extras ldap radius"
+IUSE="extras ldap radius"
 
 DEPEND="
 	dev-libs/hiredis

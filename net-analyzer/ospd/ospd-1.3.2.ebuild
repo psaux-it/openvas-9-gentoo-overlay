@@ -13,7 +13,7 @@ SRC_URI="https://github.com/greenbone/ospd/archive/v1.3.2.tar.gz -> ${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
-IUSE="+extras"
+IUSE="extras"
 
 RDEPEND="
 	dev-python/defusedxml[${PYTHON_USEDEP}]
