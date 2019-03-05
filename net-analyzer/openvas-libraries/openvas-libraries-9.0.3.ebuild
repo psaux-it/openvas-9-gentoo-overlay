@@ -26,6 +26,7 @@ DEPEND="
 	net-libs/libpcap
 	net-libs/libssh:=
 	sys-libs/zlib
+	extras? ( dev-perl/CGI )
 	ldap? ( net-nds/openldap )
 	radius? ( net-dialup/freeradius-client )"
 
@@ -39,7 +40,6 @@ BDEPEND="
 	extras? ( app-doc/doxygen[dot]
 		  app-doc/xmltoman
 		  app-text/htmldoc
-		  dev-perl/CGI
 		  dev-perl/SQL-Translator
 	)"
 
