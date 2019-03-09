@@ -22,7 +22,6 @@ DEPEND="
 	>=net-analyzer/openvas-libraries-9.0.3
 	extras? ( dev-perl/CGI
 		  dev-perl/GD
-		  media-libs/gd:2=
 	)"
 
 RDEPEND="
