@@ -1,17 +1,28 @@
-# openvas-9-gentoo-overlay
-GVM-9 (previously named OpenVAS-9) overlay for Gentoo/Linux
+# OpenVAS 9.0.0 for Gentoo/Linux
 
 This is not official Gentoo/Linux OpenVAS package.
 
 You can find official Gentoo/Linux OpenVAS package: 
 https://packages.gentoo.org/packages/net-analyzer/openvas
 
-    gvm-9.0.0.ebuild
-    Version 9
+## Versions
 
-## USAGE
+openVAS 9.0.0 (stable,latest)
 
-# via local overlays
+## Package Quality
+
+This package is totaly tested and approved on official gentoo github tree for merge:
+https://github.com/gentoo/gentoo/pull/10994
+
+## What is OpenVAS
+
+OpenVAS is a full-featured vulnerability scanner. Its capabilities include unauthenticated testing, authenticated testing, various high level and low level Internet and industrial protocols, performance tuning for large-scale scans and a powerful internal programming language to implement any type of vulnerability test.
+
+OpenVAS Source --> https://github.com/greenbone
+
+## Usage
+
+### via local overlays
 
 Copy "openvas-overlay.conf" from this repository into /etc/portage/repos.conf/ to use the portage sync capabilities.
 Alternatively you can create a /etc/portage/repos.conf/openvas-overlay.conf file containing:
@@ -27,13 +38,15 @@ Then run:
     sync repo       --> emerge --sync or eix-sync or emaint -a sync
     install package --> emerge --ask net-analyzer/openvas
 
-# via layman
+### via layman
 
     layman -o https://raw.github.com/hsntgm/openvas-9-gentoo-overlay/master/repositories.xml -f -a openvas-overlay
 
-Then run --> layman -s openvas-overlay
+Then run:
 
-## USE FLAGS
+    layman -s openvas-overlay
+
+## Use Flags
 
      IUSE="extras cli gsa ospd ldap radius"
 
@@ -44,11 +57,9 @@ Then run --> layman -s openvas-overlay
  - ldap       --> LDAP Support for Openvas-Libraries
  - radius     --> Radius Support for OpenVAS-Libraries
 
-You can set them /etc/portage/package.use
-
---------------------------------------------------------------------------------------------------------------------------
-
-## SCRIPTS
+## Scripts
 
     Inspect the scripts. You never blindly run scripts you
     downloaded from the Internet, do you?
+    
+https://github.com/hsntgm/openvas-9-scripts
