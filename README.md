@@ -29,7 +29,7 @@ Then run:
 
 # via layman
 
-    layman -o https://raw.github.com/hsntgm/openvas-overlay/master/repositories.xml -f -a openvas-overlay
+    layman -o https://raw.github.com/hsntgm/openvas-9-gentoo-overlay/master/repositories.xml -f -a openvas-overlay
 
 Then run --> layman -s openvas-overlay
 
