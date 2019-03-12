@@ -9,12 +9,29 @@ https://packages.gentoo.org/packages/net-analyzer/openvas
     gvm-9.0.0.ebuild
     Version 9
 
-## HOW TO USE
+## USAGE
+
+# via local overlays
 
 Copy "openvas-overlay.conf" from this repository into /etc/portage/repos.conf/ to use the portage sync capabilities.
+Alternatively you can create a /etc/portage/repos.conf/openvas-overlay.conf file containing:
 
-    sync repo       --> eix-sync or emaint -a sync
+    [openvas-overlay]
+    location = /usr/local/portage/openvas-overlay
+    sync-type = git
+    sync-uri = https://github.com/hsntgm/openvas-9-gentoo-overlay.git
+    priority = 9999
+
+Then run:
+
+    sync repo       --> emerge --sync or eix-sync or emaint -a sync
     install package --> emerge --ask net-analyzer/openvas
+
+# via layman
+
+    layman -o https://raw.github.com/hsntgm/openvas-overlay/master/repositories.xml -f -a openvas-overlay
+
+Then run --> layman -s openvas-overlay
 
 ## USE FLAGS
 
