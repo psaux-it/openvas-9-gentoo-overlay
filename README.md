@@ -7,7 +7,16 @@ https://packages.gentoo.org/packages/net-analyzer/openvas
 
 ## Versions
 
-openVAS 9.0.0 (stable,latest)
+    openvas                      9.0.0 (stable, latest)
+
+---------------------------------------
+
+    openvas-libraries            9.0.3 (stable, latest)
+    openvas-scanner              5.1.3 (stable, latest)
+    openvas-manager              7.0.3 (stable, latest)
+    greenbone-security-assistant 7.0.3 (stable, latest)
+    gvm-tools                    1.4.1 (stable, latest)
+    ospd                         1.3.2 (stable, latest)
 
 ## What is OpenVAS
 
