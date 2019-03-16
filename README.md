@@ -9,11 +9,6 @@ https://packages.gentoo.org/packages/net-analyzer/openvas
 
 openVAS 9.0.0 (stable,latest)
 
-## Package Quality
-
-This package is totaly tested and approved on official gentoo github tree for merge:
-https://github.com/gentoo/gentoo/pull/10994
-
 ## What is OpenVAS
 
 OpenVAS is a full-featured vulnerability scanner. Its capabilities include unauthenticated testing, authenticated testing, various high level and low level Internet and industrial protocols, performance tuning for large-scale scans and a powerful internal programming language to implement any type of vulnerability test.
