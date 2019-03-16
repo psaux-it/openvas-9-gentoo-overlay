@@ -22,7 +22,8 @@ https://packages.gentoo.org/packages/net-analyzer/openvas
 
 OpenVAS is a full-featured vulnerability scanner. Its capabilities include unauthenticated testing, authenticated testing, various high level and low level Internet and industrial protocols, performance tuning for large-scale scans and a powerful internal programming language to implement any type of vulnerability test.
 
-OpenVAS Source --> https://github.com/greenbone
+OpenVAS Source Code --> https://github.com/greenbone
+OpenVAS HomePage --> http://www.openvas.org/
 
 ## Usage
 
